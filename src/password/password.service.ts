@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { CreatePasswordDto } from './dto/create-password.dto';
 import { UpdatePasswordDto } from './dto/update-password.dto';
-import { Password } from 'src/schema/password.schema';
-import { List } from 'src/schema/list.schema';
+import { Password } from '../schema/password.schema';
+import { List } from '../schema/list.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 

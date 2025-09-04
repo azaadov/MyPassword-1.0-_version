@@ -3,7 +3,7 @@ import { PasswordService } from './password.service';
 import { PasswordController } from './password.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Password, PasswordSchema } from 'src/schema/password.schema';
-import { List, ListSchema } from 'src/schema/list.schema';
+import { List, ListSchema } from '../schema/list.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([{ name: Password.name, schema: PasswordSchema },
