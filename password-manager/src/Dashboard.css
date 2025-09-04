@@ -1,0 +1,311 @@
+/* Orqa fon qora va oq matn */
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  #root {
+    min-height: 100vh;
+    background-color: #121212;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  .container {
+    background-color: transparent !important; /* oq fonni olib tashlash */
+  }
+  
+  /* Dashboard header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .dashboard-header h2 {
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  /* List Card */
+  .card-list {
+    background: #1e1e1e;
+    color: #f1f1f1;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.6);
+  }
+  
+  /* Password Item */
+  .password-item {
+    background: #2c2c2c;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    border: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: 500;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #0083b0, #005f73);
+  }
+
+  .btn-add-list {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    color: #f1f1f1;
+    border: none !important;  
+    outline: none !important; 
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-add-list:hover {
+    background: linear-gradient(135deg, #3a3a3a, #222);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn-add-list:focus,
+  .btn-add-list:active {
+  box-shadow: none !important; 
+  outline: none !important;
+}
+  
+  .btn-warning {
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .btn-warning:hover {
+    background: linear-gradient(135deg, #fb8500, #e36414);
+  }
+  
+  /* Spinner markazda */
+  .spinner-border {
+    display: block;
+    margin: 30px auto;
+  }
+  
+  .navbar {
+    border-bottom: 1px solid #2c2c2c;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .navbar .nav-link,
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar .form-control {
+  background: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+
+.navbar .form-control::placeholder {
+  color: #aaa;
+}
+  
+  .navbar .form-control {
+    background: #1e1e1e;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .navbar .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00b4db;
+  }
+
+  .card-list {
+    background-color: #1e1e1e !important; /* qora fon */
+    color: #f1f1f1 !important;           /* matn oq */
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+  
+  .card-list .card-title {
+    color: #ffd700; /* sarlavha sariq (gold) */
+    font-weight: bold;
+  }
+  
+  .password-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+  }
+  .password-item:last-child {
+    border-bottom: none;
+  }
+  
+  p.text-muted {
+    color: #f1f1f1 !important;
+  }
+
+  /* Add List Modal dizayni */
+.modal-content {
+  background: #1e1e2f; /* qoraroq fon */
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #ffd700; /* oltin rang */
+}
+
+.modal-body {
+  padding-top: 0.5rem;
+}
+
+.modal-body input {
+  background: #2c2c3e;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.modal-body input:focus {
+  outline: none;
+  border-color: #00b4db; /* moviy */
+  box-shadow: 0 0 8px #00b4db;
+}
+
+/* Footer tugmalari */
+.modal-footer {
+  border-top: none;
+}
+
+.modal-footer .btn {
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-footer .btn-add-list {
+  background: linear-gradient(45deg, #00b4db, #0083b0);
+  border: none;
+  color: white;
+}
+
+.modal-footer .btn-add-list:hover {
+  background: linear-gradient(45deg, #0083b0, #00b4db);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 180, 219, 0.5);
+}
+
+.modal-footer .btn-secondary {
+  background: #444;
+  border: none;
+  color: #fff;
+}
+
+.modal-footer .btn-secondary:hover {
+  background: #555;
+}
+
+
+.card-list {
+  background-color: #1e1e2f;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-list .card-title a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+.card-list .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.card-list .btn-edit,
+.card-list .btn-delete {
+  width: 48%;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.card-list .btn-edit {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.card-list .btn-edit:hover {
+  background-color: #45a049;
+}
+
+.card-list .btn-delete {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.card-list .btn-delete:hover {
+  background-color: #d32f2f;
+}
+
+.password-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}

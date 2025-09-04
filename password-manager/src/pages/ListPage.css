@@ -1,0 +1,311 @@
+/* Orqa fon */
+.list-container {
+    min-height: 100vh;
+    background: #0a0a0a;
+    padding: 30px;
+    font-family: "Fira Code", monospace;
+    color: #00cc66;
+  }
+  
+  /* Header */
+  .list-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #00cc66;
+    text-shadow: 0 0 3px #00cc66; 
+  }
+  
+  /* Back link */
+  .list-header a {
+    color: #024b27;
+    text-decoration: none;
+    font-size: 1.2rem;  
+    font-weight: bold;
+    padding: 8px 14px;
+    border: 1px solid #03b15d;
+    border-radius: 8px;
+    text-shadow: 0 0 3px #03b15d;
+    transition: all 0.2s ease;
+  }
+  
+  .list-header a:hover {
+    color: #fff;
+    background: rgba(0, 230, 118, 0.1);
+    text-shadow: 0 0 6px #00e676;
+    transform: scale(1.05);
+  }
+  
+  /* Password Card */
+  .password-card {
+    background: linear-gradient(145deg, #0a0a0a, #111); 
+    border: 1px solid #02773c;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #e0ffe8; 
+    box-shadow: 0 0 12px rgba(0, 204, 102, 0.2),
+                inset 0 0 8px rgba(0, 204, 102, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .password-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+    border-color: #019e52;
+  }
+  
+  /* Password nomi */
+  .password-card h5 {
+    color: #01a858;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00aa58;
+  }
+  
+  /* Password text */
+  .password-card p {
+    font-size: 1rem;
+    margin: 4px 0;
+    color: #aafcc7;
+  }
+  
+  /* Description */
+  .password-desc {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+  }
+
+  .password-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #83ad98, #01b15c, #01a754) border-box;
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) padding-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    animation: neonBorder 3s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes neonBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .password-card span {
+    color: #00ad5a;  
+    font-weight: bold;
+    margin-right: 6px;
+    text-shadow: 0 0 5px #00e676;
+  }
+
+  .password-content {
+    flex: 1;
+  }
+
+  .password-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+/* Umumiy tugma uslubi */
+.password-actions button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.password-actions {
+  display: flex;
+  gap: 12px;  
+  align-items: center;
+}
+
+
+/* Edit tugmasi */
+.btn-edit {
+  color: #00801e !important;
+  border: 1px solid #00831f !important;
+  background: transparent !important;
+  box-shadow: 0 0 6px rgba(0, 114, 27, 0.5);
+}
+
+.btn-edit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #01831f;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.btn-edit:hover {
+  color: #fff !important;
+}
+
+.btn-edit:hover::before {
+  left: 0; 
+}
+  
+ /* Delete tugmasi */
+.btn-delete {
+  color: #990211 !important;
+  border: 1px solid #8b000e !important;
+  background: transparent !important;
+  box-shadow: 0 0 6px rgba(119, 20, 30, 0.5);
+}
+
+.btn-delete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #80000d;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.btn-delete:hover {
+  color: #fff !important;
+}
+
+.btn-delete:hover::before {
+  left: 0;
+}
+  
+  /* Add Password Button */
+  .btn-add-password {
+    background: #111;             
+    border: 1px solid #00cc66;   
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #00cc66;              
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(0, 204, 102, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-add-password:hover {
+    background: #000;            
+    color: #00ff88;              
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
+    transform: scale(1.05);
+  }
+  
+  
+  /* Modal oynasi */
+  .modal-content {
+    background: #0d0d0d;
+    border: 1px solid #00cc66;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 204, 102, 0.4);
+    color: #fff;
+  }
+  
+  /* Modal header */
+  .modal-header {
+    border-bottom: 1px solid #00cc66;
+    background: #111;
+    color: #00cc66;
+    text-shadow: 0 0 3px #00cc66;
+  }
+  
+  /* Modal body */
+  .modal-body {
+    background: #0d0d0d;
+    color: #ddd;
+  }
+  .modal-title {
+    color: #b9b9b9;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px #01703a;
+  }
+  
+  /* Modal inputlar */
+  .modal-body input,
+  .modal-body textarea {
+    background: #1a1a1a;
+    border: 1px solid #00cc66;
+    border-radius: 8px;
+    padding: 10px;
+    color: #00e676;
+    font-family: "Fira Code", monospace;
+    box-shadow: inset 0 0 5px rgba(0, 230, 118, 0.3);
+  }
+  
+  .modal-body input:focus,
+  .modal-body textarea:focus {
+    outline: none;
+    border-color: #00e676;
+    box-shadow: 0 0 8px #00e676;
+  }
+  
+  /* Modal footer tugmalari */
+  .modal-footer {
+    background: #111;
+    border-top: 1px solid #00cc66;
+  }
+  
+  .modal-footer button {
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  /* Cancel tugmasi */
+  .modal-footer .btn-secondary {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    transition: 0.3s;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background: #333;
+    border-color: #666;
+  }
+  
+  /* Save tugmasi */
+  .modal-footer .btn-add-password {
+    background: linear-gradient(90deg, #00cc66, #00e676);
+    border: none;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.6);
+  }
+  
+  .modal-footer .btn-add-password:hover {
+    background: linear-gradient(90deg, #00e676, #00cc66);
+    box-shadow: 0 0 18px rgba(0, 230, 118, 0.9);
+    transform: scale(1.05);
+  }
+  

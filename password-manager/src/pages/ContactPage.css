@@ -1,0 +1,27 @@
+.contact-page {
+    background-color: #121212;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .contact-card {
+    border-radius: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 165, 0, 0.4);
+  }
+  
+  .contact-card img {
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .contact-card img:hover {
+    transform: scale(1.2);
+  }
+  

@@ -1,0 +1,88 @@
+/* Body & Page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #121212; /* qora fon */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+  }
+  
+  /* Auth Page */
+  .auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212;
+    padding: 20px;
+  }
+  
+  /* Auth Card */
+  .auth-card {
+    background-color: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s;
+  }
+  
+  .auth-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255,165,0,0.4);
+  }
+  
+  /* Form Controls */
+  .auth-card .form-control {
+    background-color: #121212;
+    border: 1px solid #333;
+    color: #e0e0e0;
+  }
+  
+  .auth-card .form-control:focus {
+    background-color: #121212;
+    border-color: #ff9800;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+    color: #fff;
+  }
+  
+  /* Labels */
+  .auth-card label {
+    font-weight: 500;
+    color: #cfcfcf;
+  }
+  
+  /* Buttons */
+  .auth-card .btn {
+    background-color: #ff9800;
+    color: #121212;
+    border: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s;
+  }
+  
+  .auth-card .btn:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+    color: #121212;
+  }
+  
+  /* Register/Login Link */
+  .auth-card p {
+    color: #727171; /* qoraroq rang */
+    font-size: 0.9rem;
+  }
+  
+  .auth-card p a {
+    color: #ff9800; /* link sariq */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .auth-card p a:hover {
+    color: #ffc107; /* hoverda och sariq */
+    text-decoration: underline;
+  }
