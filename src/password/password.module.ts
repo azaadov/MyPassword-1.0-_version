@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { PasswordService } from './password.service';
 import { PasswordController } from './password.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Password, PasswordSchema } from 'src/schema/password.schema';
+import { Password, PasswordSchema } from '../schema/password.schema';
 import { List, ListSchema } from '../schema/list.schema';
 
 @Module({
