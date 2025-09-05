@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Card, Spinner, Alert, InputGroup } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
+import { API_URL } from "../config";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,7 @@ function LoginPage() {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/login", {
+      const response = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

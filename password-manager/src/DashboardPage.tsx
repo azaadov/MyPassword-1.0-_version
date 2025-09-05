@@ -15,6 +15,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 import "./Dashboard.css";
+import { API_URL } from "./config";
 
 interface List {
   _id: string;
@@ -44,7 +45,7 @@ function DashboardPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:4000/list/getAllList", {
+      const res = await fetch(`${API_URL}/list/getAllList`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) {
@@ -70,7 +71,7 @@ function DashboardPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("http://localhost:4000/list/addList", {
+      const res = await fetch(`${API_URL}/list/addList`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +106,7 @@ function DashboardPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/list/updateList/${editListId}`, {
+      const res = await fetch(`${API_URL}/list/updateList/${editListId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -132,7 +133,7 @@ function DashboardPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/list/deleteList/${id}`, {
+      const res = await fetch(`${API_URL}/list/deleteList/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

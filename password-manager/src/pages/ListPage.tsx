@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Container, Card, Button, Spinner, Alert, Modal, Form } from "react-bootstrap";
 import "./ListPage.css";
+import { API_URL } from "../config";
 
 interface PasswordItem {
   _id: string;
@@ -35,7 +36,7 @@ function ListPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/list/${id}`, {
+      const res = await fetch(`${API_URL}/list/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const result = await res.json();
@@ -58,7 +59,7 @@ function ListPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/pass/addPassword`, {
+      const res = await fetch(`${API_URL}/pass/addPassword`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +102,7 @@ function ListPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/pass/updatePassword/${editPasswordId}`, {
+      const res = await fetch(`${API_URL}/pass/updatePassword/${editPasswordId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +140,7 @@ function ListPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://localhost:4000/pass/deletePassword/${id}`, {
+      const res = await fetch(`${API_URL}/pass/deletePassword/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

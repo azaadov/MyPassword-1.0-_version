@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Card, Spinner, Alert, InputGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
+import { API_URL } from "../config";
 
 function RegisterPage() {
   const [username, setUsername] = useState("");
@@ -13,13 +14,14 @@ function RegisterPage() {
 
   const navigate = useNavigate();
 
+
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/register", {
+      const response = await fetch(`${API_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
@@ -29,7 +31,7 @@ function RegisterPage() {
 
       if (!response.ok) throw new Error(data.message || "Something went wrong");
 
-      navigate("/login"); // muvaffaqiyatli ro'yxatdan so'ng login sahifasiga o'tish
+      navigate("/login"); 
     } catch (err: any) {
       setError(err.message);
     } finally {
