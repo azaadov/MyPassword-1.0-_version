@@ -5,6 +5,7 @@ import { ListModule } from './list/list.module';
 import { PasswordModule } from './password/password.module';
 import { AuthModule } from './auth/auth.module';
 import { MyLogger } from './logging/custom.logger';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { MyLogger } from './logging/custom.logger';
     PasswordModule,
     AuthModule
   ],
-  controllers: [],
+  controllers: [AppController],
   providers: [MyLogger],
 })
 export class AppModule {}
