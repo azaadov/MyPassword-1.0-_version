@@ -13,7 +13,7 @@ async function bootstrap() {
     transform: true,
   }));
   app.enableCors({
-    origin: 'http://localhost:3000', 
+    origin: 'https://mypassword-1-0-version.onrender.com', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true
   });
