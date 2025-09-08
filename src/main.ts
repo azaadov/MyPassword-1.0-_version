@@ -13,7 +13,7 @@ async function bootstrap() {
     transform: true,
   }));
   app.enableCors({
-    origin: 'https://mypassword-1-0-version.onrender.com', 
+    origin: 'https://my-password-1-0-version-3yyn.vercel.app', 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true
   });
