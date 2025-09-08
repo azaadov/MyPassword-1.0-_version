@@ -13,7 +13,11 @@ async function bootstrap() {
     transform: true,
   }));
   app.enableCors({
-    origin: 'https://my-password-1-0-version-3yyn.vercel.app', 
+    origin: [
+      'http://localhost:3000', 
+      'https://my-password-1-0-version-3yyn.vercel.app', 
+      'https://my-password-1-0-version.vercel.app'
+    ], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true
   });
